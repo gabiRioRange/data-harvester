@@ -1,0 +1,4 @@
+https://www.python.org
+https://news.ycombinator.com
+https://www.wikipedia.org
+https://pypi.org
