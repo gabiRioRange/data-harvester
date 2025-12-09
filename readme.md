@@ -1,109 +1,134 @@
-🚜 Data Harvester 3.0 (Firefox Edition)
+<h1 align="left">🚜 Data Harvester 3.0 (Firefox Edition)</h1>
 
-Data Harvester é uma ferramenta de engenharia de dados universal projetada para coletar, limpar e estruturar informações da web de forma automática. Diferente de scrapers simples, ele utiliza um motor híbrido (Requests para velocidade e Selenium/Firefox para sites dinâmicos) e processamento paralelo para alta performance.
-✨ Funcionalidades Principais
+###
 
-    ⚡ Modo Turbo (Multithreading): Processa múltiplos sites simultaneamente, reduzindo drasticamente o tempo de coleta.
+<h3 align="left">Digital Craftsman Backend | Automação | Dados</h3>
 
-    🦊 Híbrido & Dinâmico: Alterna entre Requests (leve) e Selenium GeckoDriver (para sites com JavaScript, React, Angular).
+###
 
-    📊 Extração Inteligente: Identifica e estrutura automaticamente:
+<img align="right" height="150" src="https://i.imgflip.com/ae5t3z.gif" />
 
-        Títulos (H1-H3)
+###
 
-        Parágrafos de conteúdo
+<p align="left">O <b>Data</b> Harvester é uma ferramenta robusta de <b>engenharia de dados universal</b> para coletar, limpar e estruturar informações da web. <br>Ele utiliza um <b>motor híbrido</b> (Requests para velocidade e Selenium/Firefox para dinâmica) e processamento paralelo para garantir alta performance e resiliência em qualquer tipo de site.</p>
 
-        Links úteis
+###
 
-        Tabelas HTML (converte automaticamente para abas no Excel)
+<h3 align="left">Digital Craftsman Backend | Automação | Dados</h3>
 
-        Metadados (SEO descriptions, keywords)
+[<img src="https://img.shields.io/static/v1?message=Status%3A%20Estável&logo=python&label=&color=009688&logoColor=white&labelColor=232323&style=for-the-badge" height="30" alt="" />](URL_DO_SEU_PROJETO)
+<img src="https://img.shields.io/static/v1?message=Python%203.8%2B&logo=python&label=&color=3776AB&logoColor=white&labelColor=232323&style=for-the-badge" height="30" alt="Python 3.8+ Versão" />
+[<img src="https://img.shields.io/static/v1?message=Licença%3A%20MIT&logo=github&label=&color=F05032&logoColor=white&labelColor=232323&style=for-the-badge" height="30" alt="" />](URL_DA_SUA_LICENCA)
 
-    🛡️ Resiliência: Sistema de Retry automático para falhas de conexão e rotação de User-Agent para evitar bloqueios.
+###
 
-    📑 Saída Organizada: Gera arquivos JSON (dados brutos) e Excel (.xlsx) com abas separadas para cada tipo de dado.
+---
 
-    📝 Logs Profissionais: Rastreabilidade completa via arquivo execution.log.
+###
 
-🛠️ Instalação
-Pré-requisitos
+<h2 align="left">✨ Funcionalidades Principais</h2>
 
-    Python 3.8+ instalado.
+###
 
-    Mozilla Firefox instalado na máquina (para o modo dinâmico).
+<p align="left">O Data Harvester foi construído com foco em velocidade, resiliência e organização da saída de dados:</p>
 
-Passo a Passo
+###
 
-    Clone o repositório:
-    Bash
+<ul align="left">
+    <li><strong>⚡ Modo Turbo (Multithreading):</strong> Processa múltiplos sites simultaneamente, reduzindo drasticamente o tempo de coleta em lote.</li>
+    <li><strong>🦊 Híbrido & Dinâmico:</strong> Alterna entre <code>Requests</code> (leve) e <code>Selenium/GeckoDriver</code> (para sites com JavaScript, React, Angular).</li>
+    <li><strong>📊 Extração Inteligente:</strong> Identifica e estrutura automaticamente Títulos, Parágrafos, Links e <b>Tabelas HTML</b> (conversão automática para Excel).</li>
+    <li><strong>🛡️ Resiliência:</strong> Sistema de Retry automático para falhas de conexão e rotação de User-Agent.</li>
+    <li><strong>📑 Saída Organizada:</strong> Gera arquivos <b>JSON</b> e <b>Excel (.xlsx)</b> com abas separadas para cada tipo de dado.</li>
+</ul>
 
-git clone https://github.com/gabiRioRange/data-harvester.git
-cd data-harvester
+###
 
-Crie e ative um ambiente virtual (recomendado):
-Bash
+---
 
-python -m venv .venv
+###
+
+<h2 align="left">🛠️ Instalação (Python)</h2>
+
+###
+
+<h3 align="left">Pré-requisitos</h3>
+
+<p align="left">O projeto requer apenas o <b>Python 3.8+</b> e o <b>Mozilla Firefox</b> (para o modo dinâmico) instalados.</p>
+
+###
+
+<h3 align="left">Passo a Passo</h3>
+
+<p align="left"><strong>1. Clone o repositório:</strong></p>
+
+bash
+
+    git clone [https://github.com/gabiRioRange/data-harvester.git](https://github.com/gabiRioRange/data-harvester.git)
+    cd data-harvester
+    
+<p align="left"><strong>2. Crie e ative um ambiente virtual (Recomendado):</strong></p>
+
+     python -m venv .venv
 # Windows:
-.venv\Scripts\activate
+    .venv\Scripts\activate
 # Linux/Mac:
-source .venv/bin/activate
+    source .venv/bin/activate
 
-Instale as dependências:
-Bash
+<p align="left"><strong>3. Instale as dependências:</strong></p>
 
     pip install requests beautifulsoup4 pandas lxml openpyxl selenium webdriver-manager fake-useragent
 
-🚀 Como Usar
+<h2 align="left">🚀 Como Usar</h2>
 
-Execute o script principal:
-Bash
+<p align="left">Execute o <code>harvester.py</code> e escolha a opção no menu interativo:</p>
 
-python harvester.py
+    python harvester.py
+    
+<h4 align="left">Opção 1: Teste Único</h4>
 
-Você verá um menu interativo:
-Opção 1: Teste Único
+<p align="left">Ideal para testar uma URL específica rapidamente. O script perguntará a URL e salvará os dados.</p>
 
-Ideal para testar uma URL específica rapidamente. O script perguntará a URL e salvará os dados.
-Opção 2: Processamento em Lote (Turbo)
+<h4 align="left">Opção 2: Processamento em Lote (Turbo)</h4>
 
-Lê um arquivo de texto com múltiplas URLs e processa todas em paralelo.
+<p align="left">Permite ler o arquivo <code>urls.txt</code> (um link por linha) e processar todas as URLs em paralelo.</p>
 
-    Crie um arquivo chamado urls.txt na pasta do projeto.
+<h2 align="left">📂 Estrutura do Projeto e Saída</h2>
 
-    Adicione um link por linha:
-    Plaintext
-
-    https://www.python.org
-    https://news.ycombinator.com
-    https://exemplo.com/dados-financeiros
-
-    Escolha a Opção 2 no menu.
-
-    Defina se deseja usar o Firefox (Modo Dinâmico) ou Requests (Modo Rápido).
-
-📂 Estrutura do Projeto
+<p align="left">O projeto é estruturado para facilitar a manutenção e a rastreabilidade (<code>execution.log</code>).</p>
 Plaintext
 
 data-harvester/
-│
-├── exports/               # 📂 Onde os dados (JSON/Excel) são salvos automaticamente
-│   ├── python_org_20231208.xlsx
-│   └── python_org_20231208.json
-│
-├── harvester.py           # 🧠 O cérebro do scraper (Script Principal)
-├── urls.txt               # 📄 Lista de sites para processamento em lote
-├── execution.log          # 📝 Histórico de erros e sucessos
-└── README.md              # 📄 Documentação
 
-💾 Exemplo de Saída (Excel)
+    │
+    ├── exports/             # 📂 Onde os dados (JSON/Excel) são salvos automaticamente
+    ├── harvester.py         # 🧠 O cérebro do scraper
+    ├── urls.txt             # 📄 Lista de sites para processamento em lote
+    └── execution.log        # 📝 Histórico de erros e sucessos
 
-O arquivo Excel gerado é altamente organizado:
-Aba	Conteúdo
-Metadata	Título da página, URL, Data da coleta, Description.
-Links	Lista de todos os links encontrados e seus textos.
-Conteudo_Texto	Todos os cabeçalhos e parágrafos em ordem de leitura.
-Tabela_0, Tabela_1...	Cada tabela HTML encontrada vira uma aba separada e limpa.
-👤 Autor
+<p align="left">O arquivo Excel gerado possui abas separadas para <strong>Metadata</strong>, <strong>Links</strong>, <strong>Conteudo_Texto</strong> e abas numeradas para cada <strong>Tabela HTML</strong> encontrada.</p>
 
-Gabriel - Desenvolvedor Python | Backend & Automação
+<h2 align="left">👤 Autor e Contato</h2>
+
+<h4 align="left">Gabriel - Desenvolvedor Python | Backend & Automação</h4>
+
+###
+
+<div align="left">
+  <a href="https://github.com/gabiRioRange">
+    <img src="https://img.shields.io/static/v1?message=GitHub&logo=github&label=&color=181717&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="GitHub Logo" />
+  </a>
+  <img width="12" />
+  <a href="mailto:vieiragabrieldesouza78@gmail.com">
+    <img src="https://img.shields.io/static/v1?message=E-mail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="Gmail Logo" />
+  </a>
+  <img width="12" />
+  <a href="https://www.linkedin.com/in/SEU_LINKEDIN_AQUI">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="LinkedIn Logo" />
+  </a>
+</div>
+
+###
+
+<p align="left">⭐ Fique à vontade para entrar em contato ou abrir issues!</p>
+<div> <img style="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer&reversal=false&fontSize=70&fontColor=FFFFFF&fontAlign=50&fontAlignY=50&stroke=-&descSize=20&descAlign=50&descAlignY=50&theme=cobalt" /> </div>
